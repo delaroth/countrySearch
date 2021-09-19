@@ -1,0 +1,9 @@
+<App /> // list
+	<Header />
+		<Title />
+			countries-num
+		<SearchBox />
+	<CountriesList />
+		<Country />
+	<Footer />
+		your-name

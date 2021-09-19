@@ -1,13 +1,130 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  width: 50vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  position: sticky;
+  margin-left: -25vw;
+  top: 0px;
+
+  background-color: aliceblue;
+  width: 100vw;
+}
+
+h1 span {
+  font-weight: normal;
+  font-size: small;
+}
+
+h1 {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+[name="countrySearch"] {
+  height: 20px;
+  margin: 30px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+
+.flag {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+  border: 1px solid black;
+  margin: 7.5px;
+}
+
+/* #countryList {
+  background-color: blanchedalmond;
+} */
+
+.country {
+  display: flex;
+  width: 95%;
+  border: 1px solid black;
+  margin: 20px;
+  background-color: burlywood;
+}
+.country:hover {
+  background-color: khaki;
+  cursor: pointer;
+}
+
+.continent {
+  color: darkslategrey;
+}
+
+.background,
+.background2 {
+  background-color: rgba(72, 72, 66, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background2 {
+  display: none;
+}
+.popUp,
+.popUp2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 65vh;
+  width: 30vw;
+  background-color: tan;
+  border-radius: 10%;
+  margin: 0px;
+}
+
+#big {
+  border-radius: 5px;
+  width: 20vw;
+  height: 20vh;
+}
+
+.popUp div span {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.popUp div {
+  margin: 10px;
+}
+
+.region h4,
+.capital h4 {
+  margin: 5px;
+}
+
+.region h4 span,
+.capital h4 span {
+  font-weight: normal;
+  font-size: small;
+}
+
+.capitalAndRegion {
+  display: flex;
+  justify-content: space-between;
 }
