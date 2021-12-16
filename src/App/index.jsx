@@ -10,54 +10,54 @@ import axios from 'axios'
 
 const PopUpContext = createContext()
 
-function App () {
-       
+function App() {
+
     const [list, setList] = useState([])
 
-    function getList () {
-        axios.get('https://restcountries.eu/rest/v2/all')
-        .then(res=> {
-            setList(res.data)
-            console.log(res.data)
-        })
+    function getList() {
+        axios.get('https://restcountries.com/v2/all')
+            .then(res => {
+                setList(res.data)
+                console.log(res.data)
+            })
     }
 
     const [search, setSearch] = useState()
 
     function searchForCountry(str) {
-         setSearch(list.filter((item)=> item.name.toLowerCase().includes(str.toLowerCase())))
+        setSearch(list.filter((item) => item.name.toLowerCase().includes(str.toLowerCase())))
     }
-    
-    
 
-useEffect(getList, [])
 
-// const amountOfCountries = list.length
-if (search) {
-    return(
-      <div className='container' >
-       <div id='app'>
-        <PopUp2 />
-        <Header countryCount={search.length} func={searchForCountry} />
-        <CountryList countryList={search} />
-      </div>
-     </div>  
-    )
-    
-}
-else {
-    return (
-        
-       <div className='container'>
-           <div id='app'>
-              <PopUp2 />
-              <Header countryCount={list.length} func={searchForCountry} />
-              <CountryList countryList={list} />
-           </div>
-       </div>
-      )  
-}
-        
+
+    useEffect(getList, [])
+
+    // const amountOfCountries = list.length
+    if (search) {
+        return (
+            <div className='container' >
+                <div id='app'>
+                    <PopUp2 />
+                    <Header countryCount={search.length} func={searchForCountry} />
+                    <CountryList countryList={search} />
+                </div>
+            </div>
+        )
+
+    }
+    else {
+        return (
+
+            <div className='container'>
+                <div id='app'>
+                    <PopUp2 />
+                    <Header countryCount={list.length} func={searchForCountry} />
+                    <CountryList countryList={list} />
+                </div>
+            </div>
+        )
+    }
+
 }
 
 
